@@ -49,7 +49,7 @@ class Queue {
     
     this.size--;
     
-    return startNode;
+    return startNode.val;
   }
 
   /** peek(): return the value of the first node in the queue. */
