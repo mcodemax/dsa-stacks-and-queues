@@ -42,7 +42,7 @@ class Queue {
     
     if(this.size === 1){
     	this.first = null;
-   		this.last = null;
+	this.last = null;
     }else{
     	this.first = startNode.next
     }
