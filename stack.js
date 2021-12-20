@@ -45,15 +45,22 @@ class Stack {
    * and return its value. Should throw an error if the stack is empty. */
 
   pop() {
-		if(this.size === 0) throw new Error('Stack is Empty');
+	if(this.size === 0) throw new Error('Stack is Empty');
+    
+    const poppedNode = this.first;
     
     if(this.size === 1){
     	this.first = null;
       this.last = null;
       this.size--;
+      
+      return poppedNode.val;
     }
     
-    /* this. */
+    this.first = poppedNode.next;
+    this.size--;
+    
+    return poppedNode.val;
   }
 
   /** peek(): return the value of the first node in the stack. */
